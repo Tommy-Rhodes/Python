@@ -1,9 +1,0 @@
-# Online Bouncer
-age = input('What is your age? ')
-
-if int(age) <= 0 or >= 100:
-    print("Please don't joke")
-elif int(age) <= 21:
-    print('You are too young to enter')
-elif int(age) >= 21:
-    print('You can enter. Please enjoy your stay')
