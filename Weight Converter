@@ -1,9 +1,0 @@
-weight = float((input('What is your weight? '))
-unit = input('Is it (L)bs or (K)g? ')
-
-if unit.upper() == 'L':
-    converted = weight * 0.45
-    print(f"Your weight in Kilograms is {converted}")
-elif unit.upper() == 'K':
-    converted = weight / 0.45
-    print(f"Your weight in Pounds is {converted}")
