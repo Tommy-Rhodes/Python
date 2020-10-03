@@ -1,0 +1,11 @@
+# Level Checker
+
+level = input('What level are you trying to enter? ')
+current_level = 10
+
+if int(level) > int(current_level):
+    print('You have not accessed this level yet!')
+elif int(level) < int(current_level):
+    print('You have already completed this level!')
+elif int(level) == int(current_level):
+    print('Good Luck')
