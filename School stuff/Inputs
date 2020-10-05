@@ -1,0 +1,8 @@
+Show = input("What is your favourite TV show? ")
+print(show)
+Show = input("What is your favourite TV show now? ")
+print(show)
+Show = input("What is your favourite TV show now? ")
+print(show)
+Show = input("What is your favourite TV show now? ")
+print(show)
