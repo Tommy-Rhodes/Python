@@ -1,0 +1,41 @@
+import random
+import time
+
+question_number = random.randint(0, 5)
+guess_count = 0
+guess_limit = 2
+play = input('Do you want to play? (Y)es (N)o ')
+
+while guess_count <= guess_limit:
+    if play == 'N':
+        print('Ok..')
+        time.sleep(1)
+        print('Goodbye')
+        break
+    elif play == 'Y':
+        if question_number == question_number:
+            print('Welcome to the animal quessing game!')
+            time.sleep(1)
+            answer = 'pig'
+            print('The animal i am thinking of is pink.')
+            guess = input('What is your guess? ')
+            if guess == answer:
+                print('You got it correct :D')
+                break
+            else:
+                print('The animal i am thinking of is commonly used in BBQs')
+                guess = input('What is your guess? ')
+                if guess == answer:
+                    print('You got it correct :D')
+                    break
+                else:
+                    print('Final guess!')
+                    time.sleep(1)
+                    print('They are the source of A LOT of types of meat')
+                    guess = input('What is your guess? ')
+                    if guess == answer:
+                        print('You got it correct :D')
+                        break
+                    else:
+                        print(f"The answer was {answer}")
+                        break
