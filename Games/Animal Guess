@@ -1,7 +1,7 @@
 import random
 import time
 
-question_number = random.randint(1, 2)
+question_number = random.randint(1, 4)
 guess_count = 0
 guess_limit = 2
 play = input('Do you want to play? (Y)es (N)o ')
@@ -13,7 +13,7 @@ while guess_count <= guess_limit:
         print('Goodbye')
         break
     elif play == 'Y':
-        if question_number == '1':
+        if question_number == 1:
             print('Welcome to the animal quessing game!')
             time.sleep(1)
             answer = 'pig'
@@ -40,7 +40,7 @@ while guess_count <= guess_limit:
                         print(f"The answer was {answer}")
                         break
                     
-        if question_number == '2':
+        if question_number == 2:
             print('Welcome to the animal quessing game!')
             time.sleep(1)
             answer = 'cow'
@@ -59,6 +59,60 @@ while guess_count <= guess_limit:
                     print('Final guess!')
                     time.sleep(1)
                     print('The noise they make rhymes with Boo')
+                    guess = input('What is your guess? ')
+                    if guess == answer:
+                        print('You got it correct :D')
+                        break
+                    else:
+                        print(f"The answer was {answer}")
+                        break
+
+        if question_number == 2:
+            print('Welcome to the animal quessing game!')
+            time.sleep(1)
+            answer = 'chicken'
+            print('It can not fly')
+            guess = input('What is your guess? ')
+            if guess == answer:
+                print('You got it correct :D')
+                break
+            else:
+                print('It is very small')
+                guess = input('What is your guess? ')
+                if guess == answer:
+                    print('You got it correct :D')
+                    break
+                else:
+                    print('Final guess!')
+                    time.sleep(1)
+                    print('It produces something that can be cooked in a lot of different ways')
+                    guess = input('What is your guess? ')
+                    if guess == answer:
+                        print('You got it correct :D')
+                        break
+                    else:
+                        print(f"The answer was {answer}")
+                        break
+
+        if question_number == 4:
+            print('Welcome to the animal quessing game!')
+            time.sleep(1)
+            answer = 'horse'
+            print('It was used in a meat scandal a few years ago')
+            guess = input('What is your guess? ')
+            if guess == answer:
+                print('You got it correct :D')
+                break
+            else:
+                print('It can be riden')
+                guess = input('What is your guess? ')
+                if guess == answer:
+                    print('You got it correct :D')
+                    break
+                else:
+                    print('Final guess!')
+                    time.sleep(1)
+                    print('It wears ..... shoes')
                     guess = input('What is your guess? ')
                     if guess == answer:
                         print('You got it correct :D')
