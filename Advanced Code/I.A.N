@@ -27,8 +27,8 @@ class Application(tk.Frame):
         print(f"Hello, {name}")
         time.sleep(1)
         print("What may i do for you?")
-        print("1 = caclulator")
-        print("2 = dice")
+        print("1 = Calculator")
+        print("2 = Dice")
         print("3 = Weight Converter")
         function = int(input("Please chose a function "))
         if function == 1:
@@ -87,8 +87,24 @@ class Application(tk.Frame):
             elif unit.upper() == 'K':
                 converted = weight / 0.45
                 print(f"Your weight in Pounds is {converted}")
-        else:
-            print("Please enter a valid option!")
+        	else:
+            	print("Please enter a valid option!")
+        elif function == 4:
+            print("(1) = The year you where born")
+            print("(2) = How old you are")
+            question = int(input("1 or 2? "))
+            if question == 1:
+                age = int(input('How old are you? '))
+                year = 2020 - age
+                print(f"You where born in {year}")
+            elif question == 2:
+                year = int(input('What year where you born? '))
+                age = 2020 - year
+                print(f"You are{age}")
+            else:
+                print("Please enter a valid option")
+           
+
             
                            
 
