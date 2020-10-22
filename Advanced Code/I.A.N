@@ -29,6 +29,7 @@ class Application(tk.Frame):
         print("What may i do for you?")
         print("1 = caclulator")
         print("2 = dice")
+        print("3 = Weight Converter")
         function = int(input("Please chose a function "))
         if function == 1:
             number1 = float(input('Enter your first number '))
@@ -77,6 +78,17 @@ class Application(tk.Frame):
                     play -= 2
                 else:
                     print('Please type Y or N')
+        elif function == 3:
+            weight = float(input('What is your weight? '))
+            unit = input('Is it (L)bs or (K)g? ')
+            if unit.upper() == 'L':
+                converted = weight * 0.45
+                print(f"Your weight in Kilograms is {converted}")
+            elif unit.upper() == 'K':
+                converted = weight / 0.45
+                print(f"Your weight in Pounds is {converted}")
+        else:
+            print("Please enter a valid option!")
             
                            
 
