@@ -26,91 +26,117 @@ class Application(tk.Frame):
         time.sleep(1)
         print(f"Hello, {name}")
         time.sleep(1)
-        print("What may i do for you?")
-        print("1 = Calculator")
-        print("2 = Dice")
-        print("3 = Weight Converter")
-        function = int(input("Please chose a function "))
-        if function == 1:
-            number1 = float(input('Enter your first number '))
-            time.sleep(1)
-            print('Processing . . .')
-            time.sleep(1)
-            print('(1) +')
-            print('(2) -')
-            print('(3) / (division)')
-            print('(4) * (multiplication)')
-            operation = int(input('What operation do you want to do? '))
-            time.sleep(1)
-            number2 = float(input('Enter your second number '))
-            if operation == 1:
-                print('Your answer is...')
+        stop = 0
+        repeat = 1
+        while stop <= repeat:
+            print("What may i do for you?")
+            print("1 = Calculator")
+            print("2 = Dice")
+            print("3 = Weight Converter")
+            print("4 = Age Calculator")
+            function = int(input("Please chose a function "))
+            if function == 1:
+                stop += 2
+                number1 = float(input('Enter your first number '))
                 time.sleep(1)
-                print(number1 + number2)
-            elif operation == 2:
-                print('Your answer is...')
+                print('Processing . . .')
                 time.sleep(1)
-                print(number1 - number2)
-            elif operation == 3:
-                print('Your answer is...')
+                print('(1) +')
+                print('(2) -')
+                print('(3) / (division)')
+                print('(4) * (multiplication)')
+                operation = int(input('What operation do you want to do? '))
                 time.sleep(1)
-                print(number1 / number2)
-            elif operation == 4:
-                print('Your answer is...')
-                time.sleep(1)
-                print(number1 * number2)
-            else:
-                print('Enter a valid operation')
-        elif function == 2:
-            roll = random.randint(1,6)
-            again = 1
-            play = 0
-
-            while play <= again:
-                print(f"The answer is {roll}")
-                play += 2
-                roll_again = input('Do you want to roll again? (Y)es (N)o ')
-                if roll_again == 'N':
-                    print('Goodbye')
-                    break
-                elif roll_again == 'Y':
-                    roll = random.randint(1,6)
-                    play -= 2
+                number2 = float(input('Enter your second number '))
+                if operation == 1:
+                    print('Your answer is...')
+                    time.sleep(1)
+                    print(number1 + number2)
+                    time.sleep(1)
+                    stop -= 2
+                elif operation == 2:
+                    print('Your answer is...')
+                    time.sleep(1)
+                    print(number1 - number2)
+                    time.sleep(1)
+                    stop -= 2
+                elif operation == 3:
+                    print('Your answer is...')
+                    time.sleep(1)
+                    print(number1 / number2)
+                    time.sleep(1)
+                    stop -= 2
+                elif operation == 4:
+                    print('Your answer is...')
+                    time.sleep(1)
+                    print(number1 * number2)
+                    time.sleep(1)
+                    stop -= 2
                 else:
-                    print('Please type Y or N')
-        elif function == 3:
-            weight = float(input('What is your weight? '))
-            unit = input('Is it (L)bs or (K)g? ')
-            if unit.upper() == 'L':
-                converted = weight * 0.45
-                print(f"Your weight in Kilograms is {converted}")
-            elif unit.upper() == 'K':
-                converted = weight / 0.45
-                print(f"Your weight in Pounds is {converted}")
-        	else:
-            	print("Please enter a valid option!")
-        elif function == 4:
-            print("(1) = The year you where born")
-            print("(2) = How old you are")
-            question = int(input("1 or 2? "))
-            if question == 1:
-                age = int(input('How old are you? '))
-                year = 2020 - age
-                print(f"You where born in {year}")
-            elif question == 2:
-                year = int(input('What year where you born? '))
-                age = 2020 - year
-                print(f"You are{age}")
-            else:
-                print("Please enter a valid option")
+                    print('Enter a valid operation')
+                    time.sleep(1)
+                    stop -= 2
+            elif function == 2:
+                stop += 2
+                roll = random.randint(1,6)
+                again = 1
+                play = 0
+    
+                while play <= again:
+                    print(f"The answer is {roll}")
+                    stop += 2
+                    play += 2
+                    roll_again = input('Do you want to roll again? (Y)es (N)o ')
+                    if roll_again == 'N':
+                        print('Goodbye')
+                        time.sleep(1)
+                        stop -= 2
+                    elif roll_again == 'Y':
+                        roll = random.randint(1,6)
+                        play -= 2
+                        time.sleep(1)
+                        stop -= 2
+                    else:
+                        print('Please type Y or N')
+            elif function == 3:
+                stop += 2
+                weight = float(input('What is your weight? '))
+                unit = input('Is it (L)bs or (K)g? ')
+                if unit.upper() == 'L':
+                    converted = weight * 0.45
+                    print(f"Your weight in Kilograms is {converted}")
+                    time.sleep(1)
+                    stop -= 2
+                elif unit.upper() == 'K':
+                    converted = weight / 0.45
+                    print(f"Your weight in Pounds is {converted}")
+                    stop -= 2
+            elif function == 4:
+                stop += 2
+                print("(1) = The year you where born")
+                print("(2) = How old you are")
+                question = int(input("1 or 2? "))
+                if question == 1:
+                    age = int(input('How old are you? '))
+                    year = 2020 - age
+                    print(f"You where born in {year}")
+                    time.sleep(1)
+                    stop -= 2
+                elif question == 2:
+                    year = int(input('What year where you born? '))
+                    age = 2020 - year
+                    print(f"You are {age}")
+                    time.sleep(1)
+                    stop -= 2
+                else:
+                    print("Please enter a valid option")
            
-
             
                            
-
 
         
 
 root = tk.Tk()
 app = Application(master=root)
 app.mainloop()
+
