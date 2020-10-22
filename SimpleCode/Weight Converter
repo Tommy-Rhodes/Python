@@ -1,4 +1,4 @@
-weight = float((input('What is your weight? '))
+weight = float(input('What is your weight? '))
 unit = input('Is it (L)bs or (K)g? ')
 
 if unit.upper() == 'L':
