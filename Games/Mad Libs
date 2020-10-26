@@ -1,4 +1,4 @@
-ime = str(input('A time: '))
+time = str(input('A time: '))
 sibling = str(input('Brother or sister? '))
 show = str(input('A TV show '))
 colour1 = str(input('A colour '))
