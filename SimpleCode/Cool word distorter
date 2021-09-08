@@ -1,0 +1,27 @@
+import time
+
+fancyText = input(str('Enter anything you want: '))
+
+for i in range(10):
+    time.sleep(0.05)
+    print(fancyText)
+for i in range(10):
+    time.sleep(0.05)
+    print(i*' ', fancyText)
+for i in range(10):
+    time.sleep(0.05)
+    print((10-i)*' ', fancyText)
+
+for i in [1, 2, 3]:
+    for n in range(len(fancyText)):
+        time.sleep(0.05)
+        print(fancyText[n:], fancyText[:n])
+
+for i in range(6):
+    time.sleep(0.1)
+    print(fancyText[:6], (i*2)*' ',
+          fancyText[6:])
+for i in reversed(range(6)):
+    time.sleep(0.05)
+    print(fancyText[:6], (i*2)*' ',
+          fancyText[6:])
