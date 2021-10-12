@@ -1,0 +1,183 @@
+import time
+
+# Variables
+score = 0
+questionAmount = 0
+
+# Functions
+def Answer(answer):
+    global score
+    global questionAmount
+    userAnswer = str(input("Please enter the appropriate number here! "))
+    if userAnswer.lower() == answer:
+        print("Congratulations you got it right!")
+        score += 1
+        print("Your score is " + str(score))
+        questionAmount += 1
+        
+    else:
+        print("Sorry you got it wrong!")
+        print("The answer was: " + answer)
+        questionAmount += 1
+
+def Options(Q1, Q2, Q3):
+    print("Please choose the correct syntax out of the following:")
+    print("(1) " + Q1)
+    print("(2) " + Q2)
+    print("(3) " + Q3)
+
+# Answer Format
+# Answer("Answer")
+
+play = input("Do you want to play a game? ")
+
+if play.lower() == "no":
+    print("Oh,")
+    time.sleep(1.5)
+    print("ok....")
+    time.sleep(1.5)
+    print("Goodbye I guess :(")
+    exit()
+elif play.lower() == "yes":
+
+    # Question 1
+    print("How do you print a message in python?")
+    print("")
+    Options('p("Hello World")', 'print("Hello World")', 'Print("Hello World")')
+    Answer("2")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 2
+    print("How do you declare a comment in python?")
+    print("")
+    Options("/* This is a comment*/", "//This is a comment", "#This is a comment")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 3
+    print("What is NOT a legal variable name?")
+    print("")
+    Options("my-var", "my_var", "MyVar")
+    Answer("1")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 4
+    print("How do you create a variable with the numeric value 5?")
+    print("")
+    Options("x = 5", "x = int(5)", "Both are correct")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 5 
+    print("What is the correct file extension for Python files?")
+    print("")
+    Options(".pyth", ".py", ".pt")
+    Answer("2")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 6
+    print("How do you create a variable with the floating number 2.8?")
+    print("")
+    Options("x = float(2.8)", "x = 2.8", "Both are correct")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 7
+    print("How do you create a function?")
+    print("")
+    Options("creare myFunction():", "def myFunction():", "function myFunction():")
+    Answer("2")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 8
+    print("How do you convert an intteger to a string in a print statement?")
+    print("")
+    Options("print(str(x))", "print(str(x)", "Print(str(x))")
+    Answer("1")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 9
+    print("What operator is used to multiply numbers?")
+    print("")
+    Options("x", "*", "%")
+    Answer("2")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 10
+    print("How do you write an if statement?")
+    print("")
+    Options("if (x > y)", "if x > y", "if x > y:")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 11
+    print("How do you write a while loop?")
+    print("")
+    Options("while x > y:", "while (x > y):", "while x > y")
+    Answer("1")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 12
+    print("How do you write a for loop?")
+    print("")
+    Options("for x in y:", "for (x > y):", "for x > y:")
+    Answer("1")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 13
+    print("What statement is used to stop a loop?")
+    print("")
+    Options("stop", "exit", "break")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 14
+    print("Wich one is a Boolean data type?")
+    print("")
+    Options("False", "True", "Both of the above")
+    Answer("3")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+
+    # Question 15
+    print("What does the % do?")
+    print("")
+    Options("Shows the remainder after dividing", "Square roots the number", "Witch Craft")
+    Answer("1")
+    print("")
+    time.sleep(1)
+    print("############################################################")
+    
+    # End of Quiz
+    print("That is the end of the quiz!")
+    print("Your score is " + str(score) + "/" + str(questionAmount))
+else:
+    print("That is not a valid option! Please choose either yes or no.")
+
