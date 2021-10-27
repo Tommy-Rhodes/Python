@@ -1,0 +1,39 @@
+import random
+
+
+# Makes the captcha all possibilities
+alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
+                 "j", "k", "l", "m", "n", "o", "p", "q", "r",
+                 "s", "t", "u", "v", "w", "x", "y", "z"]
+
+alphabetHigher = ["A", "B", "C", "D", "E", "F", "G", "H", "I",
+                  "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+                  "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+amount = random.randint(0, 3)
+
+# Hard coded :(
+choice1 = random.choice(alphabetLower)
+choice2 = random.choice(alphabetLower)
+choice3 = random.choice(alphabetLower)
+
+choice4 = random.choice(alphabetHigher)
+choice5 = random.choice(alphabetHigher)
+
+choice6 = random.choice(numbers)
+choice7 = random.choice(numbers)
+
+# The final captcha
+captcha = choice4 + choice1 + choice2 + choice3 + choice5 + str(choice6) + str(choice7)
+
+# Prints the captcha
+print("The captcha is " + captcha + "!")
+answer = input("Please complete it to continue: ")
+
+# Checks if the captcha is correct
+if answer == captcha:
+    print("That is correct, Welcome!")
+else:
+    print("That is not the captcha!")
